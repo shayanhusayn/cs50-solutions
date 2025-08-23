@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', () => {
+                let buttons = document.querySelectorAll('.option');
+                let result = document.querySelector('.result');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        if (button.innerHTML == 'Janissaries') {
+                            button.style.backgroundColor = 'green';
+                            result.innerHTML = 'Correct';
+                        } else {
+                            button.style.backgroundColor = 'red';
+                            result.innerHTML = 'Incorrect';
+
+                        }
+                    });
+                });
+
+                let input = document.querySelector('#answer');
+                let button = document.querySelector('#submitbtn');
+                let ans = document.querySelector('.ans');
+
+                button.addEventListener('click', (event) => {
+                    if (input.value.toLowerCase() === 'k2') {
+                        ans.innerHTML = 'Correct';
+                        input.style.backgroundColor = 'green';
+                    } else {
+                        ans.innerHTML = 'Incorrect';
+                        input.style.backgroundColor = 'red';
+                    }
+                    event.preventDefault();
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    What was the name of the elite infantry unit made up of Christian boys taken through the devshirme system?
+                </h3>
+                <p class="result"></p>
+                <button class="option">Janissaries</button>
+                <button class="option">Sipahi</button>
+                <button class="option">Mamluks</button>
+                <button class="option">Bektashi</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <form>
+                    <h3>
+                        Which mountain is the highest peak in Pakistan?
+                    </h3>
+                    <p class="ans"></p>
+                    <input autocomplete="off" placeholder="Answer" type="text" autofocus id="answer">
+                    <button id="submitbtn" type="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
