@@ -1,0 +1,23 @@
+.bottom-text {
+    margin: 15px;
+    text-align: center;
+    color: red;
+}
+
+body {
+    background-image: url('background.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: white;
+}
+
+.text-center, #back-home {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+#back-home {
+    text-align: center;
+}

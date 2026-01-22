@@ -1,0 +1,28 @@
+HTML tags
+<h1>
+<div>
+<ul>
+<li>
+<header>
+<footer>
+<p>
+<strong>
+<a>
+<nav>
+
+CSS properties, Selectors used .class, #id, tag{}, (,) grouping
+margin
+text-align
+color
+background-image
+background-repeat
+background-position
+background-size
+background-attachment
+background-color
+font-family
+font-weight
+
+Bootstrap: used for basic pagination and added card component(responsive grid behavior).
+Javascript: used to dynamically generate cards based on the current page number.
+
